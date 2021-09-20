@@ -6,7 +6,7 @@
   <link href="https://huxiaozz.github.io/atom.xml" rel="self"/>
   
   <link href="https://huxiaozz.github.io/"/>
-  <updated>2021-09-19T06:34:48.736Z</updated>
+  <updated>2021-09-20T08:00:36.496Z</updated>
   <id>https://huxiaozz.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>biaozhu</title>
+    <link href="https://huxiaozz.github.io/2021/09/20/biaozhu/"/>
+    <id>https://huxiaozz.github.io/2021/09/20/biaozhu/</id>
+    <published>2021-09-20T07:55:45.000Z</published>
+    <updated>2021-09-20T08:00:36.496Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="在Anaconda-prompt中创建，激活，删除python虚拟环境"><a href="#在Anaconda-prompt中创建，激活，删除python虚拟环境" class="headerlink" title="在Anaconda prompt中创建，激活，删除python虚拟环境"></a>在Anaconda prompt中创建，激活，删除python虚拟环境</h2><p>conda create -n 环境名称，直接默认anaconda所用的python版本</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建虚拟环境，python=3 可以精确到3.x某版本</span>conda create <span class="token operator">-</span>n 虚拟环境名称 python<span class="token operator">=</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>切换python虚拟环境，在命令行或者anaconda prompt中输入：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Linux系统:<span class="token builtin class-name">source</span> activate 虚拟环境名称  Windows:activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在anaconda中删除python虚拟环境</p><pre class="line-numbers language-none"><code class="language-none">conda remove -n 虚拟环境名称 --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;在Anaconda-prompt中创建，激活，删除python虚拟环境&quot;&gt;&lt;a href=&quot;#在Anaconda-prompt中创建，激活，删除python虚拟环境&quot; class=&quot;headerlink&quot; title=&quot;在Anaconda prompt中创建，激活</summary>
+      
+    
+    
+    
+    
+    <category term="python" scheme="https://huxiaozz.github.io/tags/python/"/>
+    
+    <category term="anconda" scheme="https://huxiaozz.github.io/tags/anconda/"/>
+    
+    <category term="环境" scheme="https://huxiaozz.github.io/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo和matery主题搭建静态博客</title>

@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>biaozhu</title>
+      <link href="/2021/09/20/biaozhu/"/>
+      <url>/2021/09/20/biaozhu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="在Anaconda-prompt中创建，激活，删除python虚拟环境"><a href="#在Anaconda-prompt中创建，激活，删除python虚拟环境" class="headerlink" title="在Anaconda prompt中创建，激活，删除python虚拟环境"></a>在Anaconda prompt中创建，激活，删除python虚拟环境</h2><p>conda create -n 环境名称，直接默认anaconda所用的python版本</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建虚拟环境，python=3 可以精确到3.x某版本</span>conda create <span class="token operator">-</span>n 虚拟环境名称 python<span class="token operator">=</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>切换python虚拟环境，在命令行或者anaconda prompt中输入：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Linux系统:<span class="token builtin class-name">source</span> activate 虚拟环境名称  Windows:activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在anaconda中删除python虚拟环境</p><pre class="line-numbers language-none"><code class="language-none">conda remove -n 虚拟环境名称 --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> anconda </tag>
+            
+            <tag> 环境 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo和matery主题搭建静态博客</title>
       <link href="/2021/09/17/hello-world/"/>
       <url>/2021/09/17/hello-world/</url>
