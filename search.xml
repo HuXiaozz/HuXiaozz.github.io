@@ -23,7 +23,7 @@
     
     
     <entry>
-      <title>shequ</title>
+      <title>spring boot+vue社区</title>
       <link href="/2021/09/21/shequ/"/>
       <url>/2021/09/21/shequ/</url>
       
@@ -44,11 +44,11 @@
     
     
     <entry>
-      <title>biaozhu</title>
-      <link href="/2021/09/20/biaozhu/"/>
-      <url>/2021/09/20/biaozhu/</url>
+      <title>标注图片环境</title>
+      <link href="/2021/09/20/python-huan-jing/"/>
+      <url>/2021/09/20/python-huan-jing/</url>
       
-        <content type="html"><![CDATA[<h2 id="在Anaconda-prompt中创建，激活，删除python虚拟环境"><a href="#在Anaconda-prompt中创建，激活，删除python虚拟环境" class="headerlink" title="在Anaconda prompt中创建，激活，删除python虚拟环境"></a>在Anaconda prompt中创建，激活，删除python虚拟环境</h2><p>conda create -n 环境名称，直接默认anaconda所用的python版本</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建虚拟环境，python=3 可以精确到3.x某版本</span>conda create <span class="token operator">-</span>n 虚拟环境名称 python<span class="token operator">=</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>切换python虚拟环境，在命令行或者anaconda prompt中输入：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Linux系统:<span class="token builtin class-name">source</span> activate 虚拟环境名称  Windows:activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在anaconda中删除python虚拟环境</p><pre class="line-numbers language-none"><code class="language-none">conda remove -n 虚拟环境名称 --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="在Anaconda-prompt中创建，激活，删除python虚拟环境"><a href="#在Anaconda-prompt中创建，激活，删除python虚拟环境" class="headerlink" title="在Anaconda prompt中创建，激活，删除python虚拟环境"></a>在Anaconda prompt中创建，激活，删除python虚拟环境</h2><p>conda create -n 环境名称，直接默认anaconda所用的python版本</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建虚拟环境，python=3 可以精确到3.x某版本</span>conda create <span class="token operator">-</span>n 虚拟环境名称 python<span class="token operator">=</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>切换python虚拟环境，在命令行或者anaconda prompt中输入：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Linux系统:<span class="token builtin class-name">source</span> activate 虚拟环境名称  Windows:activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在anaconda中删除python虚拟环境</p><pre class="line-numbers language-none"><code class="language-none">conda remove -n 虚拟环境名称 --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="安装labelme软件"><a href="#安装labelme软件" class="headerlink" title="安装labelme软件"></a>安装labelme软件</h2><p>(1)  打开cmd，anaconda打开anaconda prompt</p><p>(2)  复制粘贴命令：pip install labelme</p><p>打开cmd，anaconda打开anaconda prompt</p><p>复制粘贴命令：labelme，即可打开labelme软件</p><p>cmd窗口与打开的labelme软件窗口如下：</p><p><img src="/2021/09/20/python-huan-jing/1.png" alt="labelme界面"></p><p>使用教程在网上搜一下就好了，如下：</p><p>labelme使用教程：<a href="https://blog.csdn.net/fengyingv/article/details/110649612">https://blog.csdn.net/fengyingv/article/details/110649612</a></p><p>完结撒花！！！</p><p><img src="/2021/09/20/python-huan-jing/9.2701.jpg" alt="图"></p>]]></content>
       
       
       

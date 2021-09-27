@@ -39,11 +39,11 @@
   </entry>
   
   <entry>
-    <title>shequ</title>
+    <title>spring boot+vue社区</title>
     <link href="https://huxiaozz.github.io/2021/09/21/shequ/"/>
     <id>https://huxiaozz.github.io/2021/09/21/shequ/</id>
     <published>2021-09-21T07:48:58.000Z</published>
-    <updated>2021-09-27T13:00:52.009Z</updated>
+    <updated>2021-09-27T13:22:28.379Z</updated>
     
     <content type="html"><![CDATA[<h2 id="sprint-boot-vue-实现简单的社区"><a href="#sprint-boot-vue-实现简单的社区" class="headerlink" title="sprint boot + vue 实现简单的社区"></a>sprint boot + vue 实现简单的社区</h2><p>首先感谢 豆约翰 提供的开源项目，跟着学习收获很大。</p><p>链接地址如下：<a href="https://www.bilibili.com/video/BV1Wz4y1U7vC?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1Wz4y1U7vC?spm_id_from=333.999.0.0</a></p><p>学完后的总结</p><p>修改了添加标签的时候书写#导致多出一个#导致根据标签查询数据出错问题</p><p>修改了点击下一页点解热门标签导致查询失败问题</p><p>修改了删除帖子导致评论没有删除问题</p><p>修改了更改已经发出的帖子标签更改不了问题</p><h2 id="主要应用的技术"><a href="#主要应用的技术" class="headerlink" title="主要应用的技术"></a>主要应用的技术</h2><p>前端：vue ，vuex， vueRouter， Axios， Buefy ，Element ，Vditor， DarkReader</p><p>后端：spring boot ， mysql ， mybatis ，mybatis-plus ，spring security，jwt，lombok</p><h2 id="新建仓库克隆的时候报错fatal-unable-to-access-‘https-github-com-39-OpenSSL-SSL-read-Connection-was-reset-errno-10054"><a href="#新建仓库克隆的时候报错fatal-unable-to-access-‘https-github-com-39-OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="新建仓库克隆的时候报错fatal: unable to access ‘https://github.com/...........': OpenSSL SSL_read: Connection was reset, errno 10054"></a>新建仓库克隆的时候报错fatal: unable to access ‘<a href="https://github.com/...........'">https://github.com/...........'</a>: OpenSSL SSL_read: Connection was reset, errno 10054</h2><p>产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错</p><p>按照网上解决办法，解除ssl验证后，再次git即可</p><p>git config –global http.sslVerify “false”</p><p>再次克隆成功！</p><p>未完待续。。。</p>]]></content>
     
@@ -63,13 +63,13 @@
   </entry>
   
   <entry>
-    <title>biaozhu</title>
-    <link href="https://huxiaozz.github.io/2021/09/20/biaozhu/"/>
-    <id>https://huxiaozz.github.io/2021/09/20/biaozhu/</id>
+    <title>标注图片环境</title>
+    <link href="https://huxiaozz.github.io/2021/09/20/python-huan-jing/"/>
+    <id>https://huxiaozz.github.io/2021/09/20/python-huan-jing/</id>
     <published>2021-09-20T07:55:45.000Z</published>
-    <updated>2021-09-20T08:00:36.496Z</updated>
+    <updated>2021-09-27T13:21:54.342Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="在Anaconda-prompt中创建，激活，删除python虚拟环境"><a href="#在Anaconda-prompt中创建，激活，删除python虚拟环境" class="headerlink" title="在Anaconda prompt中创建，激活，删除python虚拟环境"></a>在Anaconda prompt中创建，激活，删除python虚拟环境</h2><p>conda create -n 环境名称，直接默认anaconda所用的python版本</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建虚拟环境，python=3 可以精确到3.x某版本</span>conda create <span class="token operator">-</span>n 虚拟环境名称 python<span class="token operator">=</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>切换python虚拟环境，在命令行或者anaconda prompt中输入：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Linux系统:<span class="token builtin class-name">source</span> activate 虚拟环境名称  Windows:activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在anaconda中删除python虚拟环境</p><pre class="line-numbers language-none"><code class="language-none">conda remove -n 虚拟环境名称 --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="在Anaconda-prompt中创建，激活，删除python虚拟环境"><a href="#在Anaconda-prompt中创建，激活，删除python虚拟环境" class="headerlink" title="在Anaconda prompt中创建，激活，删除python虚拟环境"></a>在Anaconda prompt中创建，激活，删除python虚拟环境</h2><p>conda create -n 环境名称，直接默认anaconda所用的python版本</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建虚拟环境，python=3 可以精确到3.x某版本</span>conda create <span class="token operator">-</span>n 虚拟环境名称 python<span class="token operator">=</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>切换python虚拟环境，在命令行或者anaconda prompt中输入：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Linux系统:<span class="token builtin class-name">source</span> activate 虚拟环境名称  Windows:activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在anaconda中删除python虚拟环境</p><pre class="line-numbers language-none"><code class="language-none">conda remove -n 虚拟环境名称 --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="安装labelme软件"><a href="#安装labelme软件" class="headerlink" title="安装labelme软件"></a>安装labelme软件</h2><p>(1)  打开cmd，anaconda打开anaconda prompt</p><p>(2)  复制粘贴命令：pip install labelme</p><p>打开cmd，anaconda打开anaconda prompt</p><p>复制粘贴命令：labelme，即可打开labelme软件</p><p>cmd窗口与打开的labelme软件窗口如下：</p><p><img src="/2021/09/20/python-huan-jing/1.png" alt="labelme界面"></p><p>使用教程在网上搜一下就好了，如下：</p><p>labelme使用教程：<a href="https://blog.csdn.net/fengyingv/article/details/110649612">https://blog.csdn.net/fengyingv/article/details/110649612</a></p><p>完结撒花！！！</p><p><img src="/2021/09/20/python-huan-jing/9.2701.jpg" alt="图"></p>]]></content>
     
     
       
