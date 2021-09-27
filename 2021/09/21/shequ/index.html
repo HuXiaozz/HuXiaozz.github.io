@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="biaozhu, Java，深度学习">
+    <meta name="keywords" content="shequ, Java，深度学习">
     <meta name="description" content="技术博客网站">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>biaozhu | 晓晓屋</title>
+    <title>shequ | 晓晓屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">biaozhu</h1>
+                    <h1 class="description center-align post-title">shequ</h1>
                 </div>
             </div>
         </div>
@@ -412,16 +412,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/spring-boot/">
+                                <span class="chip bg-color">spring boot</span>
                             </a>
                         
-                            <a href="/tags/anconda/">
-                                <span class="chip bg-color">anconda</span>
-                            </a>
-                        
-                            <a href="/tags/%E7%8E%AF%E5%A2%83/">
-                                <span class="chip bg-color">环境</span>
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -436,14 +432,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-20
+                    2021-09-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-20
+                    2021-09-27
                 </div>
                 
 
@@ -475,22 +471,20 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="在Anaconda-prompt中创建，激活，删除python虚拟环境"><a href="#在Anaconda-prompt中创建，激活，删除python虚拟环境" class="headerlink" title="在Anaconda prompt中创建，激活，删除python虚拟环境"></a>在Anaconda prompt中创建，激活，删除python虚拟环境</h2><p>conda create -n 环境名称，直接默认anaconda所用的python版本</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建虚拟环境，python=3 可以精确到3.x某版本</span>
-conda create <span class="token operator">-</span>n 虚拟环境名称 python<span class="token operator">=</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>切换python虚拟环境，在命令行或者anaconda prompt中输入：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Linux系统:
-<span class="token builtin class-name">source</span> activate 虚拟环境名称
-  
-Windows:
-activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>在anaconda中删除python虚拟环境</p>
-<pre class="line-numbers language-none"><code class="language-none">conda remove -n 虚拟环境名称 --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
+                <h2 id="sprint-boot-vue-实现简单的社区"><a href="#sprint-boot-vue-实现简单的社区" class="headerlink" title="sprint boot + vue 实现简单的社区"></a>sprint boot + vue 实现简单的社区</h2><p>首先感谢 豆约翰 提供的开源项目，跟着学习收获很大。</p>
+<p>链接地址如下：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wz4y1U7vC?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1Wz4y1U7vC?spm_id_from=333.999.0.0</a></p>
+<p>学完后的总结</p>
+<p>修改了添加标签的时候书写#导致多出一个#导致根据标签查询数据出错问题</p>
+<p>修改了点击下一页点解热门标签导致查询失败问题</p>
+<p>修改了删除帖子导致评论没有删除问题</p>
+<p>修改了更改已经发出的帖子标签更改不了问题</p>
+<h2 id="主要应用的技术"><a href="#主要应用的技术" class="headerlink" title="主要应用的技术"></a>主要应用的技术</h2><p>前端：vue ，vuex， vueRouter， Axios， Buefy ，Element ，Vditor， DarkReader</p>
+<p>后端：spring boot ， mysql ， mybatis ，mybatis-plus ，spring security，jwt，lombok</p>
+<h2 id="新建仓库克隆的时候报错fatal-unable-to-access-‘https-github-com-39-OpenSSL-SSL-read-Connection-was-reset-errno-10054"><a href="#新建仓库克隆的时候报错fatal-unable-to-access-‘https-github-com-39-OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="新建仓库克隆的时候报错fatal: unable to access ‘https://github.com/...........': OpenSSL SSL_read: Connection was reset, errno 10054"></a>新建仓库克隆的时候报错fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/...........'">https://github.com/...........'</a>: OpenSSL SSL_read: Connection was reset, errno 10054</h2><p>产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错</p>
+<p>按照网上解决办法，解除ssl验证后，再次git即可</p>
+<p>git config –global http.sslVerify “false”</p>
+<p>再次克隆成功！</p>
+<p>未完待续。。。</p>
 
                 
             </div>
@@ -517,7 +511,7 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huxiaozz.github.io/2021/09/20/biaozhu/">https://huxiaozz.github.io/2021/09/20/biaozhu/</a>
+                    <a href="https://huxiaozz.github.io/2021/09/21/shequ/">https://huxiaozz.github.io/2021/09/21/shequ/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -555,16 +549,12 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/spring-boot/">
+                                    <span class="chip bg-color">spring boot</span>
                                 </a>
                             
-                                <a href="/tags/anconda/">
-                                    <span class="chip bg-color">anconda</span>
-                                </a>
-                            
-                                <a href="/tags/%E7%8E%AF%E5%A2%83/">
-                                    <span class="chip bg-color">环境</span>
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
                                 </a>
                             
                         </div>
@@ -1006,13 +996,13 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/21/shequ/">
+                <a href="/2021/09/22/ying-wen-fen-ci/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="shequ">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="英文分词">
                         
-                        <span class="card-title">shequ</span>
+                        <span class="card-title">英文分词</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1023,7 +1013,7 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
                         </span>
                         <span class="publish-author">
                             
@@ -1036,12 +1026,8 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/spring-boot/">
-                        <span class="chip bg-color">spring boot</span>
-                    </a>
-                    
-                    <a href="/tags/vue/">
-                        <span class="chip bg-color">vue</span>
+                    <a href="/tags/%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D/">
+                        <span class="chip bg-color">英文分词</span>
                     </a>
                     
                 </div>
@@ -1055,13 +1041,13 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/17/hello-world/">
+                <a href="/2021/09/20/biaozhu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="hexo和matery主题搭建静态博客">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="biaozhu">
                         
-                        <span class="card-title">hexo和matery主题搭建静态博客</span>
+                        <span class="card-title">biaozhu</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1072,7 +1058,7 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-20
                             </span>
                         <span class="publish-author">
                             
@@ -1085,12 +1071,16 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/matery/">
-                        <span class="chip bg-color">matery</span>
+                    <a href="/tags/anconda/">
+                        <span class="chip bg-color">anconda</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%8E%AF%E5%A2%83/">
+                        <span class="chip bg-color">环境</span>
                     </a>
                     
                 </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="biaozhu, Java，深度学习">
+    <meta name="keywords" content="英文分词, Java，深度学习">
     <meta name="description" content="技术博客网站">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>biaozhu | 晓晓屋</title>
+    <title>英文分词 | 晓晓屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">biaozhu</h1>
+                    <h1 class="description center-align post-title">英文分词</h1>
                 </div>
             </div>
         </div>
@@ -412,16 +412,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
-                            </a>
-                        
-                            <a href="/tags/anconda/">
-                                <span class="chip bg-color">anconda</span>
-                            </a>
-                        
-                            <a href="/tags/%E7%8E%AF%E5%A2%83/">
-                                <span class="chip bg-color">环境</span>
+                            <a href="/tags/%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D/">
+                                <span class="chip bg-color">英文分词</span>
                             </a>
                         
                     </div>
@@ -436,14 +428,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-20
+                    2021-09-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-20
+                    2021-09-27
                 </div>
                 
 
@@ -452,7 +444,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -475,22 +467,64 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="在Anaconda-prompt中创建，激活，删除python虚拟环境"><a href="#在Anaconda-prompt中创建，激活，删除python虚拟环境" class="headerlink" title="在Anaconda prompt中创建，激活，删除python虚拟环境"></a>在Anaconda prompt中创建，激活，删除python虚拟环境</h2><p>conda create -n 环境名称，直接默认anaconda所用的python版本</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建虚拟环境，python=3 可以精确到3.x某版本</span>
-conda create <span class="token operator">-</span>n 虚拟环境名称 python<span class="token operator">=</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+                <p>被导师要求写一篇英文分析方面的文章，选了一个英文分析的工具 nltk 首相在命令行中运行   pip install nltk  安装，然后  运行nltk.download() 下载语料库，但是发现链接失败报错：由于连接方在一段时间后没有正确答复或连接的主机没有反应,连接尝试失败。</p>
+<h2 id="nltk-download-由于连接方在一段时间后没有正确答复或连接的主机没有反应-连接尝试失败。"><a href="#nltk-download-由于连接方在一段时间后没有正确答复或连接的主机没有反应-连接尝试失败。" class="headerlink" title="nltk.download()由于连接方在一段时间后没有正确答复或连接的主机没有反应,连接尝试失败。"></a>nltk.download()由于连接方在一段时间后没有正确答复或连接的主机没有反应,连接尝试失败。</h2><p>解决办法，从github官网手动下载解压。</p>
+<p>地址：<a target="_blank" rel="noopener" href="https://github.com/nltk/nltk_data">nltk/nltk_data: NLTK Data (github.com)</a></p>
+<p>然后将下载的文件解压，解压后会有一个packages文件夹，将packages文件夹里面的东西，全部文件复制下来，然后黏贴在nltk_data文件夹里，nltk_data没有的话创建一个，至于nltk_data文件夹的路径在</p>
+<p>运行程序</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> nltk
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>stem <span class="token keyword">import</span> SnowballStemmer
+stemmer<span class="token operator">=</span> SnowballStemmer<span class="token punctuation">(</span><span class="token string">"english"</span><span class="token punctuation">)</span> <span class="token comment">#选择语言，如：英语</span>
+stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"countries"</span><span class="token punctuation">)</span> <span class="token comment">#设置一个词汇</span>
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>stem <span class="token keyword">import</span> WordNetLemmatizer
+wnl<span class="token operator">=</span>WordNetLemmatizer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>wnl<span class="token punctuation">.</span>lemmatize<span class="token punctuation">(</span><span class="token string">'countries'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#输出还原的词汇，会输出country</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>切换python虚拟环境，在命令行或者anaconda prompt中输入：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Linux系统:
-<span class="token builtin class-name">source</span> activate 虚拟环境名称
-  
-Windows:
-activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>在anaconda中删除python虚拟环境</p>
-<pre class="line-numbers language-none"><code class="language-none">conda remove -n 虚拟环境名称 --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
+<p>pycharm会输出提示如下：</p>
+<p>Searched in:<br>    - ‘C:\Users\胡余生/nltk_data’<br>        - ‘D:\anaconda\nltk_data’<br>        - ‘D:\anaconda\share\nltk_data’<br>        - ‘D:\anaconda\lib\nltk_data’<br>        - ‘C:\Users\胡余生\AppData\Roaming\nltk_data’<br>        - ‘C:\nltk_data’<br>        - ‘D:\nltk_data’<br>        - ‘E:\nltk_data’</p>
+<p>选一个路径创建文件夹nltk_data，然后将解压后的文件夹里的packages放入nltk_data，然后就成功了。</p>
+<p>分析方法参考如下链接：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39717825/article/details/110177611">https://blog.csdn.net/weixin_39717825/article/details/110177611</a></p>
+<p>安装Gephi，Gephi运行需要java环境，安装好Gephi后修改安装Gephi目录下的etc文件夹中的gephi.conf，用记事本打开，将javahome前面的#号去掉并且修改javahome路径，javahome路径为所安装的jdk路径</p>
+<p>Gephi：<a target="_blank" rel="noopener" href="https://gephi.org/">https://gephi.org/</a><br>JDK：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase-downloads.html">https://www.oracle.com/java/technologies/javase-downloads.html</a></p>
+<p>如果要调用nltk里的工具包，别忘记吧packages里的文件加相应的文件里的压缩包解压，比如运用nltk_data\chunkers里的工具要将maxent_ne_chunker.zip压缩包解压。</p>
+<p>Gephi工具里的预览有时候会显示不出来，我的将项目保存，重启软件加载项目刷新就出来了。</p>
+<p>网上还有用这种方法解决的（对我无效）：</p>
+<p>删除user directory <a target="_blank" rel="noopener" href="https://github.com/gephi/gephi/wiki/Troubleshooting">https://github.com/gephi/gephi/wiki/Troubleshooting</a></p>
+<p>更新Java的jdk版本</p>
+<h2 id="Gephi使用以及导入数据时边表格选不了的解决方法"><a href="#Gephi使用以及导入数据时边表格选不了的解决方法" class="headerlink" title="Gephi使用以及导入数据时边表格选不了的解决方法"></a>Gephi使用以及导入数据时边表格选不了的解决方法</h2><p>应用gephi进行分析，首先点击导出表格</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C1.png" alt="1"></p>
+<p>然后向输出表格里写入数据</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C2.png" alt="2"></p>
+<p>格式为csv格式，然后将写入的数据导入gephi</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C3.png" alt="3"></p>
+<p>选择输入电子表格</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C4.png" alt="4"></p>
+<p>选择边表格（注意：如果不用其输出表格的文件写入数据，将会选不了边表格选项）</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C5.png" alt="5"></p>
+<p>导入的时候选择加入当前项目，无向图</p>
+<p>然后就添加成功了，然后更改点和边的外观，点和边是一样的这里只介绍点的更改</p>
+<p>更改点的度数与大小相关，更改完点击应用！！！</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C6.png" alt="更改点的大小与度数相关"></p>
+<p>更改字体颜色</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C7.png" alt="更改点的字体颜色"></p>
+<p>更改点的颜色随度数变化</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C8.png" alt="点的颜色随度数变化"></p>
+<p>选择布局</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C9.png" alt="布局"></p>
+<p>点的外观更改的时候别忘记点击应用！！！选完布局点击运行。</p>
+<p>运行后结果</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C10.png" alt="概览结果"></p>
+<p>然后点击预览，在下面窗口设置。</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C11.png" alt="预览点设置"></p>
+<p>给label添加数据</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C13.png" alt="给label添加数据"></p>
+<p>设置边的厚度</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5C12.png" alt="边的厚度"></p>
+<p>最终结果图</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/.%5C%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D%5Cre.png" alt="最终结果图"></p>
+<p>共现网络绘制完成，完结撒花！！！</p>
+<p><img src="/2021/09/22/ying-wen-fen-ci/9.27.jpg" alt="图"></p>
 
                 
             </div>
@@ -517,7 +551,7 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huxiaozz.github.io/2021/09/20/biaozhu/">https://huxiaozz.github.io/2021/09/20/biaozhu/</a>
+                    <a href="https://huxiaozz.github.io/2021/09/22/ying-wen-fen-ci/">https://huxiaozz.github.io/2021/09/22/ying-wen-fen-ci/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -555,16 +589,8 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
-                                </a>
-                            
-                                <a href="/tags/anconda/">
-                                    <span class="chip bg-color">anconda</span>
-                                </a>
-                            
-                                <a href="/tags/%E7%8E%AF%E5%A2%83/">
-                                    <span class="chip bg-color">环境</span>
+                                <a href="/tags/%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D/">
+                                    <span class="chip bg-color">英文分词</span>
                                 </a>
                             
                         </div>
@@ -1002,9 +1028,56 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/09/22/ying-wen-fen-ci/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="英文分词">
+                        
+                        <span class="card-title">英文分词</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            HuXiao
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%8B%B1%E6%96%87%E5%88%86%E8%AF%8D/">
+                        <span class="chip bg-color">英文分词</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/09/21/shequ/">
                     <div class="card-image">
@@ -1022,9 +1095,9 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1042,55 +1115,6 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
                     
                     <a href="/tags/vue/">
                         <span class="chip bg-color">vue</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/09/17/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="hexo和matery主题搭建静态博客">
-                        
-                        <span class="card-title">hexo和matery主题搭建静态博客</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            HuXiao
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/tags/matery/">
-                        <span class="chip bg-color">matery</span>
                     </a>
                     
                 </div>
