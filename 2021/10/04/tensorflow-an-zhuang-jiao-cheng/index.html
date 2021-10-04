@@ -448,7 +448,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -503,10 +503,19 @@
 <p>如下图所示：</p>
 <p>继续执行如下命令，将虚拟环境引用到Jupyter Notebook中</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">python -m ipykernel install --user --name tensorflow2.3 --display-name "Python [conda env:tensorflow2.3]"
-#tensorflow2.3为我的虚拟环境名字，要换成你自己的，两个都要换<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+#tensorflow2.3为我的虚拟环境名字，要换成你自己的，两个都要换
+#Python [conda env:tensorflow2.3]就是notebook中的虚拟环境名字<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>上面步骤完成之后，再打开Jupyter Notebook，直接切换新的虚拟环境即可，如下图所示。</p>
 <p><img src="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/4.png" alt="4"></p>
+<p>然后这个时候启动notebook会发现，切换环境的时候，notebook服务器，也就是那个类似命令行似的黑框框，会报错：Bad file descriptor (C:\projects\libzmq\src\epoll.cpp:100)，如果你没报错，那么你现在就可以用notebook切换新的环境了。</p>
+<h2 id="Bad-file-descriptor-C-projects-libzmq-src-epoll-cpp-100-解决办法"><a href="#Bad-file-descriptor-C-projects-libzmq-src-epoll-cpp-100-解决办法" class="headerlink" title="Bad file descriptor (C:\projects\libzmq\src\epoll.cpp:100)解决办法"></a>Bad file descriptor (C:\projects\libzmq\src\epoll.cpp:100)解决办法</h2><p>当安装jupyterlab 或者jupyter notebook的时候，会自动安装ipykernel, 然后自动安装了高版本的pyzmq。</p>
+<p>此问题是pyzmq版本问题，卸载pyzmq 22.0.2，执行 pip install pyzmq==19.0.2 安装pyzmq 19.0.2即可</p>
+<p><img src="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/5.png" alt="5"></p>
+<p>使用conda list命令查看你安装的包</p>
+<p>看到pyzmq版本为22.3.0</p>
+<p>用命令 pip uninstall pyzmq 卸载pyzmq</p>
+<p>然后用命令 pip install pyzmq==19.0.2 安装19.0.2版本的pyzmq，然后启动notebook切换环境，发现成功。</p>
 <p>完结撒花！！！</p>
 <p><img src="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/10-4.jpg" alt="心情愉悦"></p>
 
