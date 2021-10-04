@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>tensorflow安装教程</title>
+      <link href="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/"/>
+      <url>/2021/10/04/tensorflow-an-zhuang-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<h2 id="win10安装tensorflow安装教程，CPU版本"><a href="#win10安装tensorflow安装教程，CPU版本" class="headerlink" title="win10安装tensorflow安装教程，CPU版本"></a>win10安装tensorflow安装教程，CPU版本</h2><p>首先安装anconda，去官网下就好了，下载链接</p><p><a href="https://www.anaconda.com/">https://www.anaconda.com/</a></p><p>然后打开anconda prompt，创建python3.7环境</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">conda create -n 虚拟环境名称 python=3.7<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后查看pip版本，如果pip版本小于19.0，那么更新pip</p><p>查看pip版本，命令：pip -V</p><p>更新pip版本：python -m pip install –upgrade pip</p><p>使用豆瓣源安装tensorflow</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pip install tensorflow-cpu==2.3.0 -i https://pypi.douban.com/simple/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>等待安装即可。</p><p>然后进行测试，输入python</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf<span class="token keyword">print</span><span class="token punctuation">(</span>tf__version__<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>出现tensorflow版本号，表明安装成功。</p><h2 id="在notebook中切换python虚拟环境"><a href="#在notebook中切换python虚拟环境" class="headerlink" title="在notebook中切换python虚拟环境"></a>在notebook中切换python虚拟环境</h2><p>安装notebook，如果安装的anconda自带notebook那么就不用安装</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">pip install jupyter notebook<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>输入</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">conda env list  #查看python虚拟环境<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/1.png" alt="1"></p><p>继续执行命令：activate tensorflow2.3 激活虚拟环境，</p><p><img src="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/2.png" alt="2"></p><p>然后执行代码：pip install ipykernel -i <a href="https://pypi.douban.com/simple%E5%AE%89%E8%A3%85ipykernel%EF%BC%8C%E5%90%8E%E9%9D%A2%E6%9C%89%E7%94%A8%E5%88%B0%E8%BF%99%E4%B8%AA">https://pypi.douban.com/simple安装ipykernel，后面有用到这个</a></p><p><img src="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/3.png" alt="3"></p><p>如下图所示：</p><p>继续执行如下命令，将虚拟环境引用到Jupyter Notebook中</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">python -m ipykernel install --user --name tensorflow2.3 --display-name "Python [conda env:tensorflow2.3]"#tensorflow2.3为我的虚拟环境名字，要换成你自己的，两个都要换<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>上面步骤完成之后，再打开Jupyter Notebook，直接切换新的虚拟环境即可，如下图所示。</p><p><img src="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/4.png" alt="4"></p><p>完结撒花！！！</p><p><img src="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/10-4.jpg" alt="心情愉悦"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> tensorflow </tag>
+            
+            <tag> notebook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>linux解压命令详解</title>
       <link href="/2021/10/02/linux-jie-ya-ming-ling-xiang-jie/"/>
       <url>/2021/10/02/linux-jie-ya-ming-ling-xiang-jie/</url>
