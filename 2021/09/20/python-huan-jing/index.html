@@ -451,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-03
+                    2021-10-09
                 </div>
                 
 
@@ -511,6 +511,34 @@ activate 虚拟环境名称<span aria-hidden="true" class="line-numbers-rows"><s
 <p>复制粘贴命令：labelImg，即可打开labelImg软件</p>
 <p>cmd窗口与打开的labelme软件窗口如下：</p>
 <p><img src="/2021/09/20/python-huan-jing/2.png" alt="2"></p>
+<h2 id="conda常用命令"><a href="#conda常用命令" class="headerlink" title="conda常用命令"></a>conda常用命令</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">conda <span class="token builtin">list</span>    <span class="token comment">#查看安装了那些包</span>
+
+conda env <span class="token builtin">list</span> <span class="token comment">#查看创建了那些虚拟环境</span>
+
+conda updata conda <span class="token comment">#更新conda</span>
+
+python <span class="token operator">-</span><span class="token operator">-</span>version <span class="token comment">#查看python版本</span>
+
+激活虚拟环境
+
+linux：source activate 虚拟环境名称
+
+windows： activate 虚拟环境名称
+
+conda install <span class="token operator">-</span>n 虚拟环境名称 <span class="token punctuation">[</span>package<span class="token punctuation">]</span> <span class="token comment">#安装package到指定虚拟环境中</span>
+
+关闭虚拟环境
+
+linux：source deactivate
+
+windows：deactivate
+
+conda remove <span class="token operator">-</span>n 虚拟环境名称 <span class="token operator">-</span><span class="token operator">-</span><span class="token builtin">all</span> <span class="token comment">#删除虚拟环境</span>
+
+conda remove <span class="token operator">-</span><span class="token operator">-</span>name 虚拟环境名称 包的名称      <span class="token comment">#删除虚拟环境中的某个包</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 <p>完结撒花！！！</p>
 <p><img src="/2021/09/20/python-huan-jing/9.2701.jpg" alt="图"></p>
 
