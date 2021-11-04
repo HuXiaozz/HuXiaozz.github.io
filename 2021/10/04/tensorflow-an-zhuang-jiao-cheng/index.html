@@ -412,12 +412,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/tensorflow/">
-                                <span class="chip bg-color">tensorflow</span>
-                            </a>
-                        
                             <a href="/tags/notebook/">
                                 <span class="chip bg-color">notebook</span>
+                            </a>
+                        
+                            <a href="/tags/tensorflow2/">
+                                <span class="chip bg-color">tensorflow2</span>
                             </a>
                         
                     </div>
@@ -439,7 +439,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-10
+                    2021-11-04
                 </div>
                 
 
@@ -448,7 +448,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -564,6 +564,9 @@ b<span class="token operator">=</span>tf<span class="token punctuation">.</span>
 <p><img src="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/14.png" alt="14"></p>
 <p>完结撒花！！！</p>
 <p><img src="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/10-4.jpg" alt="心情愉悦"></p>
+<p>21.10.18错误记录</p>
+<p>今天跑模型的时候遇到了这个</p>
+<h2 id="Loaded-runtime-CuDNN-library-7-5-0-but-source-was-compiled-with-7-6-5-CuDNN-library-major-and-minor-version-needs-to-match-or-have-higher-minor-version-in-case-of-CuDNN-7-0-or-later-version-If-using-a-binary-install-upgrade-your-CuDNN-library-If-building-from-sources-make-sure-the-library-loaded-at-runtime-is-compatible-with-the-version-specified-during-compile-configuration"><a href="#Loaded-runtime-CuDNN-library-7-5-0-but-source-was-compiled-with-7-6-5-CuDNN-library-major-and-minor-version-needs-to-match-or-have-higher-minor-version-in-case-of-CuDNN-7-0-or-later-version-If-using-a-binary-install-upgrade-your-CuDNN-library-If-building-from-sources-make-sure-the-library-loaded-at-runtime-is-compatible-with-the-version-specified-during-compile-configuration" class="headerlink" title="Loaded runtime CuDNN library: 7.5.0 but source was compiled with: 7.6.5.  CuDNN library major and minor version needs to match or have higher minor version in case of CuDNN 7.0 or later version. If using a binary install, upgrade your CuDNN library.  If building from sources, make sure the library loaded at runtime is compatible with the version specified during compile configuration"></a>Loaded runtime CuDNN library: 7.5.0 but source was compiled with: 7.6.5.  CuDNN library major and minor version needs to match or have higher minor version in case of CuDNN 7.0 or later version. If using a binary install, upgrade your CuDNN library.  If building from sources, make sure the library loaded at runtime is compatible with the version specified during compile configuration</h2><p>啊，发现cudnn版本不够，好办，去官网下载指定版本，照着上面重新解压，然后将其丢到（上面截图的目录 注意：目录要是你自己安装的目录），然后别忘记将bin文件下的cudnn64_7.dll 丢到C/windows/system32中。已经完美解决。</p>
 
                 
             </div>
@@ -628,12 +631,12 @@ b<span class="token operator">=</span>tf<span class="token punctuation">.</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/tensorflow/">
-                                    <span class="chip bg-color">tensorflow</span>
-                                </a>
-                            
                                 <a href="/tags/notebook/">
                                     <span class="chip bg-color">notebook</span>
+                                </a>
+                            
+                                <a href="/tags/tensorflow2/">
+                                    <span class="chip bg-color">tensorflow2</span>
                                 </a>
                             
                         </div>
@@ -1071,18 +1074,17 @@ b<span class="token operator">=</span>tf<span class="token punctuation">.</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/04/tensorflow-an-zhuang-jiao-cheng/">
+                <a href="/2021/10/17/qu-shui-yin-xiao-cheng-xu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="tensorflow安装教程">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="去水印小程序">
                         
-                        <span class="card-title">tensorflow安装教程</span>
+                        <span class="card-title">去水印小程序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1092,9 +1094,9 @@ b<span class="token operator">=</span>tf<span class="token punctuation">.</span>
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1103,16 +1105,15 @@ b<span class="token operator">=</span>tf<span class="token punctuation">.</span>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tensorflow/">
-                        <span class="chip bg-color">tensorflow</span>
+                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">微信小程序</span>
                     </a>
                     
-                    <a href="/tags/notebook/">
-                        <span class="chip bg-color">notebook</span>
+                    <a href="/tags/%E5%8E%BB%E6%B0%B4%E5%8D%B0/">
+                        <span class="chip bg-color">去水印</span>
                     </a>
                     
                 </div>
