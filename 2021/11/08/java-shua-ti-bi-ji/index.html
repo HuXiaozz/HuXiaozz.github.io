@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="自己的笔记1, Java，深度学习">
+    <meta name="keywords" content="java刷题笔记, Java，深度学习">
     <meta name="description" content="技术博客网站">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>自己的笔记1 | 晓晓屋</title>
+    <title>java刷题笔记 | 晓晓屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">自己的笔记1</h1>
+                    <h1 class="description center-align post-title">java刷题笔记</h1>
                 </div>
             </div>
         </div>
@@ -412,8 +412,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9D%A2%E7%BB%8F%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">面经笔记</span>
+                            <a href="/tags/java%E5%88%B7%E9%A2%98/">
+                                <span class="chip bg-color">java刷题</span>
                             </a>
                         
                     </div>
@@ -428,14 +428,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-03
+                    2021-11-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-04
+                    2021-11-08
                 </div>
                 
 
@@ -444,7 +444,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -467,12 +467,29 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>自己的笔记1</p>
-<p><img src="/2021/11/03/mianshi/1.png" alt="1"></p>
-<p><img src="/2021/11/03/mianshi/2.png" alt="1"></p>
-<p><img src="/2021/11/03/mianshi/3.png" alt="1"></p>
-<p>================================================================================================================================================================</p>
-<p><img src="/2021/11/03/mianshi/tu.jpg" alt="1"></p>
+                <p>Java参数，不管是原始类型还是引用类型，传递的都是副本(有另外一种说法是传值，但是说传副本更好理解吧，传值通常是相对传址而言)。 如果参数类型是原始类型，那么传过来的就是这个参数的一个副本，也就是这个原始参数的值，这个跟之前所谈的传值是一样的。如果在函数中改变了副本的 值不会改变原始的值. 如果参数类型是引用类型，那么传过来的就是这个引用参数的副本，这个副本存放的是参数的地址。如果在函数中没有改变这个副本的地址，而是改变了地址中的 值，那么在函数内的改变会影响到传入的参数。如果在函数中改变了副本的地址，如new一个，那么副本就指向了一个新的地址，此时传入的参数还是指向原来的 地址，所以不会改变参数的值。</p>
+<p>下面的方法可用在 Servlet 程序中读取 HTTP 头。这些方法通过 <em>HttpServletRequest</em> 对象可用：</p>
+<p><strong>1）Cookie[] getCookies()</strong><br>返回一个数组，包含客户端发送该请求的所有的 Cookie 对象。</p>
+<p><strong>2）Object getAttribute(String name)</strong><br>以对象形式返回已命名属性的值，如果没有给定名称的属性存在，则返回 null。</p>
+<p><strong>3）String getHeader(String name)</strong><br>以字符串形式返回指定的请求头的值。Cookie也是头的一种；</p>
+<p><strong>4）String getParameter(String name)</strong><br>以字符串形式返回请求参数的值，或者如果参数不存在则返回 null。</p>
+<p>JDK中提供了三个ClassLoader，根据层级从高到低为：</p>
+<ol>
+<li>Bootstrap ClassLoader，主要加载JVM自身工作需要的类。</li>
+<li>Extension ClassLoader，主要加载%JAVA_HOME%\lib\ext目录下的库类。</li>
+<li>Application ClassLoader，主要加载Classpath指定的库类，一般情况下这是程序中的默认类加载器，也是<strong>ClassLoader.getSystemClassLoader()</strong> 的返回值。（这里的Classpath默认指的是环境变量中配置的Classpath，但是可以在执行Java命令的时候使用-cp 参数来修改当前程序使用的Classpath）</li>
+</ol>
+<p>JVM加载类的实现方式，我们称为 <strong>双亲委托模型</strong>：</p>
+<p>如果一个类加载器收到了类加载的请求，他首先不会自己去尝试加载这个类，而是把这个请求委托给自己的父加载器，每一层的类加载器都是如此，因此所有的类加载请求最终都应该传送到顶层的<strong>Bootstrap ClassLoader</strong>中，只有当父加载器反馈自己无法完成加载请求时，子加载器才会尝试自己加载。</p>
+<p><strong>双亲委托模型的重要用途是为了解决类载入过程中的安全性问题。</strong></p>
+<p>假设有一个开发者自己编写了一个名为***<a target="_blank" rel="noopener" href="http://lib.csdn.net/base/java">Java</a>.lang.Object*<strong>的类，想借此欺骗JVM。现在他要使用</strong>自定义ClassLoader<strong>来加载自己编写的</strong><em>java.lang.Object*<strong>类。然而幸运的是，</strong>双亲委托模型<strong>不会让他成功。因为JVM会优先在</strong>Bootstrap ClassLoader<strong>的路径下找到</strong></em>java.lang.Object***类，并载入它</p>
+<ul>
+<li><strong>WAN</strong>（Wide Area Network <strong>广域网</strong>）：覆盖范围很大、几个城市，一个国家，几个国家甚至全球都属于广域网的范畴，从几十公里到几千或几万公里。</li>
+<li><strong>LAN</strong>（Local Area Network <strong>局域网</strong>）：分布于一个间房、每个楼层、整栋楼及楼群之间等，范围一般在2km以内，最大距离不超过10km。主要用来构建一个单位的内部网络，例如办公室网络、办公大楼内的局域网学校的校园网、工厂的企业网、大公司及科研机构的园区网等。</li>
+<li><strong>MAN</strong>（Metropolitan Area Network <strong>城域网</strong>）：介于广域网与局域网之间的一种大范围的高速网络，它的覆盖范围通常为几公里至几十公里。满足城市范围内几十公里的大量企业、机关、公司与社会服务部门的计算机连网需求，实现大量用户、多种信息传输的综合信息网络。</li>
+<li><strong>PAN</strong>（Personal Area Network <strong>个人局域网</strong>）：在个人工作的地方把属于个人使用的电子设备(如便携式电脑等)用无线技术连接起来的网络，因此也常称为无线个人局域网WPAN(Wireless PAN)。</li>
+</ul>
+<p>FDDI是局域网技术，环形拓扑；ATM是广域网；DQDB是城域网；早期以太网采用总线拓扑，由于其管理成本高、不易隔离故障点，易造成网络拥塞，逐渐被以集线器或交换机为核心的星型以太网取代</p>
 
                 
             </div>
@@ -499,7 +516,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huxiaozz.github.io/2021/11/03/mianshi/">https://huxiaozz.github.io/2021/11/03/mianshi/</a>
+                    <a href="https://huxiaozz.github.io/2021/11/08/java-shua-ti-bi-ji/">https://huxiaozz.github.io/2021/11/08/java-shua-ti-bi-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -537,8 +554,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9D%A2%E7%BB%8F%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">面经笔记</span>
+                                <a href="/tags/java%E5%88%B7%E9%A2%98/">
+                                    <span class="chip bg-color">java刷题</span>
                                 </a>
                             
                         </div>
@@ -976,9 +993,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/11/08/java-shua-ti-bi-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="java刷题笔记">
+                        
+                        <span class="card-title">java刷题笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            HuXiao
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java%E5%88%B7%E9%A2%98/">
+                        <span class="chip bg-color">java刷题</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/11/05/pytorch-xue-xi-bi-ji/">
                     <div class="card-image">
@@ -996,9 +1060,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1016,55 +1080,6 @@
                     
                     <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">学习笔记</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/11/02/fen-bu-shi-zuo-ye-1/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="分布式作业1">
-                        
-                        <span class="card-title">分布式作业1</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-02
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            HuXiao
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BD%9C%E4%B8%9A/">
-                        <span class="chip bg-color">分布式作业</span>
                     </a>
                     
                 </div>
