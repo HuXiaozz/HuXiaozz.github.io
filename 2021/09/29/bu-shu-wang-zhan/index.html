@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-03
+                    2021-11-20
                 </div>
                 
 
@@ -493,47 +493,47 @@
 <h2 id="1-安装jdk运行java项目"><a href="#1-安装jdk运行java项目" class="headerlink" title="1 安装jdk运行java项目"></a>1 安装jdk运行java项目</h2><p>jdk：既可以运行java项目也可以编译java语言</p>
 <p>jre：只能运行java项目</p>
 <p>1 首先查看CentOS是否有原生版本的java，通过命令查看</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> -qa <span class="token operator">|</span> <span class="token function">grep</span> jdk<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">rpm -qa | grep jdk<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>2 如果存在则通过命令删除</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> -e --nodeps java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">rpm -e --nodeps java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64为 1 中命令查出来的名字</p>
 <p>3 查看是否删除成功</p>
 <p>运行 1 中的命令，查询结果为空则删除成功</p>
 <p>4 在 /usr/local 目录下新建 java 文件夹，并进入</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token builtin class-name">cd</span> /usr/local
-<span class="token function">mkdir</span> java
-<span class="token builtin class-name">cd</span> java<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd /usr/local
+mkdir java
+cd java<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>5 如果你用的时xshell那就打开 Xftp，然后将 JDK 安装文件拷贝到 java 目录，如果用的时finalshell直接向目录中拉过去就行，或者进入目录点击上传都可</p>
 <p>6 使用命令进行安装，注意下载的jdk钥匙linux版本的rpm压缩包</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> -ivh jdk-8u221-linux-x64.rpm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">rpm -ivh jdk-8u221-linux-x64.rpm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>7 配置环境变量</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">vim</span> /etc/profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">vim /etc/profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>按 i 进行输入，复制如下内容到文件最底部追加</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span>/usr/java/jdk1.8.0_221-amd64
-<span class="token assign-left variable">CLASSPATH</span><span class="token operator">=</span>%JAVA_HOME%/lib:%JAVA_HOME%/jre/lib
-<span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">$JAVA_HOME</span>/bin:<span class="token variable">$JAVA_HOME</span>/jre/bin
-<span class="token builtin class-name">export</span> <span class="token environment constant">PATH</span> CLASSPATH JAVA_HOME<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">JAVA_HOME=/usr/java/jdk1.8.0_221-amd64
+CLASSPATH=%JAVA_HOME%/lib:%JAVA_HOME%/jre/lib
+PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin
+export PATH CLASSPATH JAVA_HOME<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后按按 Esc 退出，然后输入 :x 回车即为保存退出。如果输入错了，想要保存源文件那么输入Esc 后输入 :q! 表示不保存强制退出。</p>
 <p>8 让配置生效</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token builtin class-name">source</span> /etc/profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">source /etc/profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>9 检查安装是否成功</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">java -version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="2-安装tomcat"><a href="#2-安装tomcat" class="headerlink" title="2 安装tomcat"></a>2 安装tomcat</h2><p>1 在 /usr/local 目录下新建 tomcat 文件夹，并进入。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token builtin class-name">cd</span> /usr/local
-<span class="token function">mkdir</span> tomcat
-<span class="token builtin class-name">cd</span> tomcat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd /usr/local
+mkdir tomcat
+cd tomcat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>2 xshell打开 Xftp，finalshell直接上传，将 Tomcat 压缩文件拷贝到 tomcat 目录。</p>
 <p>3 解压缩。注意下载linux版本</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">tar</span> -zxvf apache-tomcat-9.0.34.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">tar -zxvf apache-tomcat-9.0.34.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>4 进入 /apache-tomcat-9.0.34/bin 路径启动 Tomcat。</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">./startup.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -553,7 +553,7 @@
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">systemctl start firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>2 开启 8080 端口</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">firewall-cmd --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span><span class="token number">8080</span>/tcp --permanent<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">firewall-cmd --zone=public --add-port=8080/tcp --permanent<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>3 输入命令重启防火墙</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">systemctl restart firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -565,40 +565,40 @@
 <p>6 将导出的vue项目拷贝到 Tomcat/webapps 下，启动访问即可。本项目就是将webda目录考入上述文件夹下。</p>
 <h2 id="3-安装-MySQL"><a href="#3-安装-MySQL" class="headerlink" title="3 安装 MySQL"></a>3 安装 MySQL</h2><p>1 新建 /usr/local/mysql，将 MySQL 安装包拷贝过去。</p>
 <p>2 进入 /usr/local/mysql，解压。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">tar</span> -xvf mysql-8.0.20-1.el7.x86_64.rpm-bundle.tar
-<span class="token comment">#mysql-8.0.20-1.el7.x86_64.rpm-bundle.tar为下载的数据库名字，要改成你自己的名字</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">tar -xvf mysql-8.0.20-1.el7.x86_64.rpm-bundle.tar
+#mysql-8.0.20-1.el7.x86_64.rpm-bundle.tar为下载的数据库名字，要改成你自己的名字<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>3 安装 MySQL 之前需要先删除 mariadb，检查是否存在 mariadb</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> -qa <span class="token operator">|</span> <span class="token function">grep</span> mariadb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">rpm -qa | grep mariadb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>4 卸载 mariadb</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> -e mariadb-libs-5.5.44-2.el7.centos.x86_64 --nodeps
-<span class="token comment">#mariadb-libs-5.5.44-2.el7.centos.x86_64为上边命令查出来的名字</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">rpm -e mariadb-libs-5.5.44-2.el7.centos.x86_64 --nodeps
+#mariadb-libs-5.5.44-2.el7.centos.x86_64为上边命令查出来的名字<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>5 安装 MySQL，注意安装顺序不要变，应为他们相互之间有依赖关系顺序为common&gt;libs&gt;client&gt;server</p>
 <p>这几个rpm包都是 2 中的包解压出来的</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> -ivh mysql-community-common-8.0.20-1.el7.x86_64.rpm --nodeps
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">rpm -ivh mysql-community-common-8.0.20-1.el7.x86_64.rpm --nodeps
 --force
-<span class="token function">rpm</span> -ivh mysql-community-libs-8.0.20-1.el7.x86_64.rpm --nodeps --
+rpm -ivh mysql-community-libs-8.0.20-1.el7.x86_64.rpm --nodeps --
 force
-<span class="token function">rpm</span> -ivh mysql-community-client-8.0.20-1.el7.x86_64.rpm --nodeps
+rpm -ivh mysql-community-client-8.0.20-1.el7.x86_64.rpm --nodeps
 --force
-<span class="token function">rpm</span> -ivh mysql-community-server-8.0.20-1.el7.x86_64.rpm --nodeps
+rpm -ivh mysql-community-server-8.0.20-1.el7.x86_64.rpm --nodeps
 --force<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>6 检查安装结果</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> -qa <span class="token operator">|</span> <span class="token function">grep</span> mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">rpm -qa | grep mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>7 初始化 MySQL</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">mysqld --initialize<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>8 授权防火墙</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">chown</span> mysql:mysql /var/lib/mysql -R<span class="token punctuation">;</span>
-systemctl start mysqld.service<span class="token punctuation">;</span>
-systemctl <span class="token builtin class-name">enable</span> mysqld<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">chown mysql:mysql /var/lib/mysql -R;
+systemctl start mysqld.service;
+systemctl enable mysqld;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>9 查看数据库默认密码</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">cat</span> /var/log/mysqld.log <span class="token operator">|</span> <span class="token function">grep</span> password<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cat /var/log/mysqld.log | grep password<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>10 登录数据库</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">mysql -uroot -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -637,24 +637,26 @@ flush privileges;<span aria-hidden="true" class="line-numbers-rows"><span></span
 <p>15 CentOS 开放 3306 端口。用于远程链接数据库</p>
 <p>如果时租的阿里云或者腾讯云参考上面如何开放端口，在防火墙里添加就好了。</p>
 <p>自己服务要运行下面的命令</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">firewall-cmd --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span><span class="token number">3306</span>/tcp --permanent
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">firewall-cmd --zone=public --add-port=3306/tcp --permanent
 systemctl restart firewalld.service
 firewall-cmd --reload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>到现在位置你的服务其就可以部署上去了，别忘记更改后端项目链接数据库的密码之类的。</p>
 <p>运行jar包</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">nohup</span> java -jar wenda-0.0.1-SNAPSHOT.jar <span class="token operator">&gt;</span> ./wenda.log <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span><span class="token file-descriptor important">&amp;1</span> <span class="token operator">&amp;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">nohup java -jar wenda-0.0.1-SNAPSHOT.jar &gt; ./wenda.log 2&gt;&amp;1 &amp;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>日志会输入到wenda.log中，后台无中断运行</p>
 <p>如何杀死进程呢？</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">ps</span> -ef <span class="token operator">|</span> <span class="token function">grep</span> wenda
-<span class="token comment">#wenda为你包的名字，前几个字符即可，比如我的包的名字wenda-01-03sn。。。。，只用输入wenda就能查到了。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ps -ef | grep wenda
+#wenda为你包的名字，前几个字符即可，比如我的包的名字wenda-01-03sn。。。。，只用输入wenda就能查到了。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>然后</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">kill</span> pid
-<span class="token comment">#pid为进程号</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">kill pid
+#pid为进程号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>就结束运行啦！</p>
+<h2 id="数据库导出数据命令"><a href="#数据库导出数据命令" class="headerlink" title="数据库导出数据命令"></a>数据库导出数据命令</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysqldump <span class="token operator">-</span>u root <span class="token operator">-</span>p  wenda <span class="token operator">&gt;</span> <span class="token keyword">dump</span><span class="token punctuation">.</span>txt   其中wenda为数据库，可以在数据库后加入表的名称，导出到<span class="token keyword">dump</span><span class="token punctuation">.</span>txt文件中<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>我的项目链接：<a target="_blank" rel="noopener" href="http://123.57.15.121:8080/wenda/#/">http://123.57.15.121:8080/wenda/#/</a></p>
 <p>欢迎来我的小论坛来玩，听说ip地址暴漏出去挺严重的会导致别人的攻击，小伙伴们别攻击我啊，学生党不容易啊，防君子不防小人吧，网站也没啥利益。</p>
 <p>本来打算将头像与帖子的显示图片设置成上传的，用户可以更改头像和帖子封面的，不是固定的，但是我看了看我租的服务器的内存，机器硬盘总共才60G，真的好小啊，果然是打折产品。。。，果断设置成固定的，不然服务器存不了多少东西就满了。。。，楼主本人还想干点别的事情，所以就这样吧！</p>
