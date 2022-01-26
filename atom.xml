@@ -142,23 +142,22 @@
   </entry>
   
   <entry>
-    <title>java尚硅谷</title>
-    <link href="https://huxiaozz.github.io/2021/11/19/java-shang-huo-gu/"/>
-    <id>https://huxiaozz.github.io/2021/11/19/java-shang-huo-gu/</id>
+    <title>源码反码补码</title>
+    <link href="https://huxiaozz.github.io/2021/11/19/yuan-ma-fan-ma-bu-ma/"/>
+    <id>https://huxiaozz.github.io/2021/11/19/yuan-ma-fan-ma-bu-ma/</id>
     <published>2021-11-19T14:21:32.000Z</published>
-    <updated>2021-11-20T05:47:14.223Z</updated>
+    <updated>2022-01-26T12:47:24.252Z</updated>
     
-    <content type="html"><![CDATA[<p>是多少</p><p>Java尚硅谷</p><p>正数：源码补码反码都一样</p><p>负数：源码除符号位以外各位取反得到反码，反码+1得到补码</p><p><strong>计算机都以补码方式存储数据</strong></p><p><img src="/2021/11/19/java-shang-huo-gu/1.png" alt="1"></p>]]></content>
+    <content type="html"><![CDATA[<p>源码反码补码</p><p>正数：源码补码反码都一样</p><p>负数：源码除符号位以外各位取反得到反码，反码+1得到补码</p><p><strong>计算机都以补码方式存储数据</strong></p><p><img src="/2021/11/19/yuan-ma-fan-ma-bu-ma/1.png" alt="1"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;是多少&lt;/p&gt;
-&lt;p&gt;Java尚硅谷&lt;/p&gt;
+    <summary type="html">&lt;p&gt;源码反码补码&lt;/p&gt;
 &lt;p&gt;正数：源码补码反码都一样&lt;/p&gt;
 &lt;p&gt;负数：源码除符号位以外各位取反得到反码，反码+1得到补码&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;计算机都以补码方式存储数据&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2021/1</summary>
+&lt;p&gt;&lt;img src=&quot;/2021/11/19/yuan-ma</summary>
       
     
     

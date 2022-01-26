@@ -107,11 +107,11 @@
     
     
     <entry>
-      <title>java尚硅谷</title>
-      <link href="/2021/11/19/java-shang-huo-gu/"/>
-      <url>/2021/11/19/java-shang-huo-gu/</url>
+      <title>源码反码补码</title>
+      <link href="/2021/11/19/yuan-ma-fan-ma-bu-ma/"/>
+      <url>/2021/11/19/yuan-ma-fan-ma-bu-ma/</url>
       
-        <content type="html"><![CDATA[<p>是多少</p><p>Java尚硅谷</p><p>正数：源码补码反码都一样</p><p>负数：源码除符号位以外各位取反得到反码，反码+1得到补码</p><p><strong>计算机都以补码方式存储数据</strong></p><p><img src="/2021/11/19/java-shang-huo-gu/1.png" alt="1"></p>]]></content>
+        <content type="html"><![CDATA[<p>源码反码补码</p><p>正数：源码补码反码都一样</p><p>负数：源码除符号位以外各位取反得到反码，反码+1得到补码</p><p><strong>计算机都以补码方式存储数据</strong></p><p><img src="/2021/11/19/yuan-ma-fan-ma-bu-ma/1.png" alt="1"></p>]]></content>
       
       
       
